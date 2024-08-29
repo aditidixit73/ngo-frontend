@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useLogin } from '../context/AdminDetails'
+import Loading from './Loading'
 
 export default function Activity() {
     const { getActivity } = useLogin()
     const [activities, SetActivity] = useState(false)
+    // const [load, setLoad] = useState(true)
     useEffect(() => {
         const efunc = async () => {
             await getActivity().then(res =>
@@ -29,7 +31,7 @@ export default function Activity() {
                             </div>
                         )
                     })
-                    : null}
+                    : <Loading/>}
             </div>
         </div>
     )

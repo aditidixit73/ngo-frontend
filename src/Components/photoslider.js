@@ -7,14 +7,14 @@ export default function PhotoSlider() {
     const {slider}=useLogin()
     
     return (
-        slider?<div style={{ display: 'flex', alignItems: 'center' }}>
+        slider?<div className='sliderImage' style={{ display: 'flex', alignItems: 'center' }}>
             <SimpleImageSlider
                     width={'100%'}
-                    height={'100vh'}
+                    height={'inherit'}
                     images={slider}
                     showBullets={false}
                     showNavs={true}
-                    style={{margin: ' auto'}}
+                    style={{margin: ' auto',}}
                     autoPlay={true}
                     autoPlayDelay={5}
                 />    

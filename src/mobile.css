@@ -1,0 +1,97 @@
+.navi{
+    display: flex;
+}
+.gul{
+    margin-top: 0.7rem;
+    display: flex;
+    align-items: center;
+}
+.open-navbtn{
+    display: none;
+}
+@media only screen and (max-width: 700px){
+    .navi{
+        flex-direction: column;
+    }
+    .act-container{
+        flex-direction: column;
+    }
+    .act-card{
+        width: 50vw;
+    }
+    .blinker-text{
+        font-size: 0.7rem !important;
+        text-align: center;
+    }
+    .logo-text{
+        font-size: medium;
+    }
+    .contact-card-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .contact-cards{
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+    nav{
+        display: none;
+        flex-direction: column;
+    }
+    .open-navbtn{
+        display: block;
+    }
+    .header{
+        position: relative;
+        height: 10vh;
+        width: 100vw;
+        justify-content: flex-start;
+        transition: all 300ms linear;
+    }
+    .dropdown-content{
+        position: relative;
+        min-width: 50vw;
+        /* background-color: inherit; */
+    }
+    .donation-page{
+        flex-direction: column;
+        height: fit-content;
+        padding: 1rem 1rem;
+    }
+    .donation-page span{
+        width: 80%;
+      }
+      .donation-page form{
+        width: 80%;}
+}
+
+@media only screen and (max-width: 530px){
+    
+    .logo-text span{
+        display: none;
+    }
+    .top-banner{
+        height: 18vh;
+    }
+    .contact-details form{
+        width: 70%;
+    }
+    .bottom-text{
+        height: 12vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .contact-details {
+        text-align: center;
+    }
+    .center-text p{
+        width: 70%;
+    }
+    .sliderImage{
+        height: 30vh;
+    }
+    .act-card{
+        width: 70vw;
+    }
+    
+}

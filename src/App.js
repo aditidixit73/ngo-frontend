@@ -1,5 +1,6 @@
 
 import './App.css';
+import './mobile.css';
 import { ProgressBar } from 'top-loading-progress-bar';
 import Headertag from "./Components/Headertag";
 import HomeSection from './Components/HomeSection';
@@ -19,6 +20,7 @@ import Donation from './Components/Donation';
 import Video from './Components/Videos';
 import { ActivityAdder } from './Components/ActivityAdder';
 import Activity from './Components/Activity';
+import Loading from './Components/Loading';
 
 function App() {
   const [load, setload] = useState(false)
@@ -46,7 +48,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Headertag />}>
-            {load ? <Route index element={<HomeSection />} /> : null}
+            <Route index element={load ? <HomeSection />: <Loading/>} /> 
             <Route path='vision' element={<Vision />} />
             <Route path='activity' element={<Activity />} />
             <Route path='contact-us' element={<Contact />} />

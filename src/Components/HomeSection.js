@@ -27,11 +27,11 @@ export default function HomeSection() {
             featact?featact.map((item) => {
               return (
                 <div className="act-card">
+                  <img src={item.image} alt="alll" />
                   <div className="act-text">
                     <h3>{item.name}</h3>
                     <p>{item.description}</p>
                   </div>
-                  <img src={item.image} alt="alll" />
                 </div>
               )
             }):null
