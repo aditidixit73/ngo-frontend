@@ -15,7 +15,6 @@ export default function Bodies() {
                 </div>)
                 }):null}
             </div>
-            <hr />
             {/* <h1>General Bodies</h1> */}
             {/* <div className="gen-body">
             
