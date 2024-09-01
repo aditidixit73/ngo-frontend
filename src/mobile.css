@@ -77,7 +77,9 @@
 }
 
 @media only screen and (max-width: 530px){
-    
+    .body-card{
+        max-width: 80%;
+    }
     .logo-text span{
         display: none;
     }
