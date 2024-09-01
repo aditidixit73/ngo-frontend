@@ -14,6 +14,7 @@ export default function Headertag() {
   const navbarRef = useRef()
   const headerRef = useRef()
   const btnRef = useRef()
+  const spanRef = useRef()
   const { user, handleLogout } = useLogin()
   const openSidebar = () => {
     sidebarRef.current.style.width = '20vw'
@@ -22,14 +23,16 @@ export default function Headertag() {
     sidebarRef.current.style.width = '0'
   }
   const openNavbar = () => {
-    headerRef.current.style.height = '80vh'
+    headerRef.current.style.height = '150vh'
     navbarRef.current.style.display = 'flex'
     btnRef.current.style.display = 'none'
+    spanRef.current.style.display = 'none'
   }
   const hideNavbar = () => {
     headerRef.current.style.height = '10vh'
     navbarRef.current.style.display = 'none'
     btnRef.current.style.display = 'block'
+    spanRef.current.style.display = 'block'
   }
   return (
     <>
@@ -77,39 +80,40 @@ export default function Headertag() {
           </span>
         </div>
         <div className="header" ref={headerRef}>
+          <span ref={spanRef} className='mob-text'>Prof. Sangam Lal Pandey Memorial Society</span>
           <button ref={btnRef} className='open-btn open-navbtn' style={{ color: 'white' }} onClick={openNavbar}>&nbsp;<FontAwesomeIcon icon={faBars} /></button>
           <nav ref={navbarRef}>
-          <button className='open-btn open-navbtn' style={{ color: 'white',position:'absolute',top:'1rem',right:"1rem"}} onClick={hideNavbar}>&nbsp;<FontAwesomeIcon icon={faMultiply} /></button>
-            <Link to="/">Home</Link>
+            <button className='open-btn open-navbtn' style={{ color: 'white', position: 'absolute', top: '1rem', right: "1rem" }} onClick={hideNavbar}>&nbsp;<FontAwesomeIcon icon={faMultiply} /></button>
+            <Link to="/" >Home</Link>
             <div className="dropdown">
               <button className="dropbtn">Who we are  <FontAwesomeIcon icon={faCaretDown} />
               </button>
               <div className="dropdown-content">
-                <Link to="/about-us">About the Society</Link>
-                <Link to="/vision">Vision & Mission</Link>
-                <Link to="/regulatory-bodies">Regulatory Bodies</Link>
+                <Link to="/about-us" >About the Society</Link>
+                <Link to="/vision" >Vision & Mission</Link>
+                <Link to="/regulatory-bodies" >Regulatory Bodies</Link>
                 {/* <Link to="/">By Laws</Link> */}
               </div>
             </div>
-            <Link to="/activity">Activity</Link>
+            <Link to="/activity" >Activity</Link>
             <div className="dropdown">
               <button className="dropbtn">Get Involved  <FontAwesomeIcon icon={faCaretDown} />
               </button>
               <div className="dropdown-content">
-                <Link to="/donate">Donate</Link>
-                <Link to="/volunteer">Volunteer</Link>
+                <Link to="/donate" >Donate</Link>
+                <Link to="/volunteer" >Volunteer</Link>
               </div>
             </div>
-            <Link to="/contact-us">Contact Us</Link>
+            <Link to="/contact-us" >Contact Us</Link>
             <div className="dropdown">
               <button className="dropbtn">Media  <FontAwesomeIcon icon={faCaretDown} />
               </button>
               <div className="dropdown-content">
-                <Link to="/gallery/image">Image Gallery</Link>
-                <Link to="/gallery/video">Video</Link>
+                <Link to="/gallery/image" >Image Gallery</Link>
+                <Link to="/gallery/video" >Video</Link>
               </div>
             </div>
-            <Link to="/news">News</Link>
+            <Link to="/news" >News</Link>
 
           </nav>
         </div>

@@ -32,12 +32,14 @@ export default function Contact() {
             </div>
             <div className="contact-cards">
                 <h4>Reach us through call :</h4>
-                <a href="tel:+919452586037">+91 9452586037&nbsp;</a>
+                <a href="tel:+919452586037">+91 9452586037,&nbsp;</a>
+                <a href="tel:+915322466436">0532 2466436&nbsp;</a>
                 
             </div>
             <div className="contact-cards last-card">
                 <h4>Reach Us through social media : </h4>
-                Mail us on <a href="/"><FontAwesomeIcon icon={faEnvelope}/>  dr.anshulpandey@gmail.com </a>
+                Mail us on <a href="mailto:prof.sangamlalpandeymemorialsoc@gmail.com"><FontAwesomeIcon icon={faEnvelope}/>  prof.sangamlalpandeymemorialsoc@gmail.com, </a>
+                <a href="mailto:dr.anshulpandey@gmail.com"> dr.anshulpandey@gmail.com </a>
             </div>
             </div>
             <hr />

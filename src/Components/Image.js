@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLogin } from '../context/AdminDetails'
+import Loading from '../Components/Loading';
 
 export default function Image() {
     const { gallery } = useLogin()
@@ -11,7 +12,7 @@ export default function Image() {
                 <img src={elem} alt="" />
             </div>
             )
-        }):null}
+        }):<Loading/>}
         </div>
     )
 }

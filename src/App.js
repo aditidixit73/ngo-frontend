@@ -21,6 +21,8 @@ import Video from './Components/Videos';
 import { ActivityAdder } from './Components/ActivityAdder';
 import Activity from './Components/Activity';
 import Loading from './Components/Loading';
+import  News  from './Components/News';
+import Volunteer from './Components/Volunteer';
 
 function App() {
   const [load, setload] = useState(false)
@@ -55,6 +57,8 @@ function App() {
             <Route path='about-us' element={<About />} />
             <Route path='regulatory-bodies' element={<Bodies />} />
             <Route path='donate' element={<Donation />} />
+            <Route path='volunteer' element={<Volunteer />} />
+            <Route path='news' element={<News />} />
             <Route path='gallery/image' element={<Image />} />
             <Route path='gallery/video' element={<Video />} />
           </Route>
